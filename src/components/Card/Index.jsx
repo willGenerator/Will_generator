@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../../App'
 
-function Card({name,beneficiary,possessions}) {
+function Card() {
+
+  const {name,setName, beneficiary,setBeficiary, possessions,setPossessions} = useContext(UserContext)
+
   return (
     <>
     <div className='flex justify-center items-center w-full'>
