@@ -1,14 +1,20 @@
 import react from 'react'
-
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import './App.css'
+import Card from './components/Card/Index'
 
 function App() {
 
 
   return (
-    <div className="App">
-      <h1>Precious</h1>
-    </div>
+    <Router>
+      <Routes>
+      
+        <Route path="/card" element={<Card/>} />
+        
+      </Routes>
+
+    </Router>
   )
 }
 
