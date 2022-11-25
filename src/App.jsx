@@ -13,7 +13,6 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/card" element={<Card/>} />
         <Route path="/:name" element={<WillPage/>} />
         
       </Routes>
