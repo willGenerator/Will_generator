@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { UserContext } from '../../App';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 function home() {
 
   const {name,setName,beneficiary, setBeneficiary,possessions, setPossessions} = useContext(UserContext)
@@ -14,7 +14,7 @@ function home() {
       setError(true)
     }
     console.log(name)
-    Navigate("/will")
+    // Navigate("/will")
    }
 
   return (
@@ -56,10 +56,10 @@ function home() {
           <div className="flex items-center justify-center place-items-center">
 
             <button type="submit">
-              <a href="#_" className="rounded relative inline-flex group items-center justify-center lg:px-[50px] md:px-[30px] px-[20px] py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-purple-600 active:shadow-none shadow-lg bg-gradient-to-tr from-purple-600 to-purple-500 border-purple-700 text-white">
+              <Link to={`/${name}`} className="rounded relative inline-flex group items-center justify-center lg:px-[50px] md:px-[30px] px-[20px] py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-purple-600 active:shadow-none shadow-lg bg-gradient-to-tr from-purple-600 to-purple-500 border-purple-700 text-white">
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-32 group-hover:h-32 opacity-10"></span>
                 <span className="relative">Generate your will</span>
-              </a>
+              </Link>
             </button>
           </div>
 
