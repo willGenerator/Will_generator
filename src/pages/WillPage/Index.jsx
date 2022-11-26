@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../../components/Card/Index'
+import { UserContext } from '../../App'
 
 function WillPage({name,possessions,beneficiary}) {
   return (
