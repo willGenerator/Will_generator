@@ -12,9 +12,11 @@ function home() {
     e.preventDefault();
     if(name.length === 0 || beneficiary.length === 0|| possessions === 0){
       setError(true)
-    }
+    }else{
     console.log(name)
-    // Navigate("/will")
+     Navigate("/will")
+    }
+    
    }
 
   return (
@@ -56,10 +58,10 @@ function home() {
           <div className="flex items-center justify-center place-items-center">
 
             <button type="submit">
-              <Link to={`/${name}`} className="rounded relative inline-flex group items-center justify-center lg:px-[50px] md:px-[30px] px-[20px] py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-purple-600 active:shadow-none shadow-lg bg-gradient-to-tr from-purple-600 to-purple-500 border-purple-700 text-white">
+              <a href="#" className="rounded relative inline-flex group items-center justify-center lg:px-[50px] md:px-[30px] px-[20px] py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-purple-600 active:shadow-none shadow-lg bg-gradient-to-tr from-purple-600 to-purple-500 border-purple-700 text-white">
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-32 group-hover:h-32 opacity-10"></span>
                 <span className="relative">Generate your will</span>
-              </Link>
+              </a>
             </button>
           </div>
 
